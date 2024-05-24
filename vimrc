@@ -1,3 +1,7 @@
+"
+" ~/.vimrc
+"
+
 set number				" show line numbers
 set wrap linebreak nolist		" line break at word
 set showmatch				" highlight matching brace
