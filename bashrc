@@ -132,6 +132,8 @@ echo xfce keyboard shortcuts:
 echo ctrl + alt + F[ile manager]
 echo ctrl + alt + T[erminal]
 echo ctrl + alt + W[eb browser]
+echo ctrl + alt + C[alibre]
+echo ctrl + alt + L[iferea]
 echo
 echo `date`
 
