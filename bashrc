@@ -117,6 +117,7 @@ shopt -s expand_aliases
 
 # Add go binaries to path
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/tapan/bin
 
 screenfetch
 
