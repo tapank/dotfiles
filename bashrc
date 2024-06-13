@@ -115,9 +115,12 @@ shopt -s expand_aliases
  shopt -s histappend
  PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
-# Add go binaries to path
+# exports
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/tapan/bin
+export blog="/home/tapan/src/karecha.com/blog/"
+export exercism="/home/tapan/src/codekatas/exercism/go/"
+export notebook="/home/tapan/src/notebook"
 
 screenfetch
 
