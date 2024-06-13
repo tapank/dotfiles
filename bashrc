@@ -121,10 +121,12 @@ export PATH=$PATH:/home/tapan/bin
 export blog="/home/tapan/src/karecha.com/blog/"
 export exercism="/home/tapan/src/codekatas/exercism/go/"
 export notebook="/home/tapan/src/notebook"
+export dotfiles="/home/tapan/src/dotfiles"
 
 screenfetch
 
 alias cp="cp -i"	# confirm before overwriting something
+alias cd..="cd .."
 set -o vi
 
 echo
