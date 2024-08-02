@@ -126,12 +126,7 @@ export dotfiles="/home/tapan/src/dotfiles"
 screenfetch
 
 alias cp="cp -i"	# confirm before overwriting something
-alias cd..="cd .."
 set -o vi
-
-echo
-echo Aliases are:
-alias
 
 echo
 echo xfce keyboard shortcuts:
