@@ -126,7 +126,8 @@ export dotfiles="/home/tapan/src/dotfiles"
 screenfetch
 
 alias cp="cp -i"	# confirm before overwriting something
-set -o vi
+set -o vi		# use vim as default editor
+set -o ignoreeof	# prevent Bash from quiting on EOF
 
 echo
 echo xfce keyboard shortcuts:
