@@ -138,4 +138,7 @@ echo ctrl + alt + C[alibre]
 echo ctrl + alt + L[iferea]
 echo
 echo `date`
+acpi -ba
+echo
+
 
