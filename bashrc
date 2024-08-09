@@ -116,18 +116,20 @@ shopt -s expand_aliases
  PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # exports
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/tapan/bin
+export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin
 export blog="/home/tapan/src/karecha.com/blog/"
 export exercism="/home/tapan/src/codekatas/exercism/go/"
 export notebook="/home/tapan/src/notebook"
 export dotfiles="/home/tapan/src/dotfiles"
 
 screenfetch
+acpi -ba
+echo `date`
 
 alias cp="cp -i"	# confirm before overwriting something
-set -o vi		# use vim as default editor
+set -o vi		# use vi as default editing mode
 set -o ignoreeof	# prevent Bash from quiting on EOF
+EDITOR=vim		# use vim for editing commands instead of vi
 
 echo
 echo xfce keyboard shortcuts:
@@ -137,8 +139,4 @@ echo ctrl + alt + W[eb browser]
 echo ctrl + alt + C[alibre]
 echo ctrl + alt + L[iferea]
 echo
-echo `date`
-acpi -ba
-echo
-
 
