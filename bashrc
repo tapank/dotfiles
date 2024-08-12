@@ -79,7 +79,7 @@ if ${use_color} ; then
 		export GIT_PS1_SHOWDIRTYSTATE=true
 		export GIT_PS1_SHOWUNTRACKEDFILES=true
 		export GIT_PS1_SHOWUPSTREAM="auto"
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]\[\e[91m\]$(__git_ps1)\[\e[00m\]\[\033[01;32m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \w\[\033[01;32m\]\[\e[91m\]$(__git_ps1)\[\e[00m\]\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
 	alias ls='ls -F --color=auto'
@@ -130,6 +130,9 @@ alias cp="cp -i"	# confirm before overwriting something
 set -o vi		# use vi as default editing mode
 set -o ignoreeof	# prevent Bash from quiting on EOF
 EDITOR=vim		# use vim for editing commands instead of vi
+export EDITOR
+export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
+shopt -s dotglob	# include dot files when globbing file names
 
 echo
 echo xfce keyboard shortcuts:
