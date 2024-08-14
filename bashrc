@@ -133,6 +133,7 @@ EDITOR=vim		# use vim for editing commands instead of vi
 export EDITOR
 export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
 shopt -s dotglob	# include dot files when globbing file names
+shopt -s cdable_vars	# treat variables as directory names
 
 echo
 echo xfce keyboard shortcuts:
