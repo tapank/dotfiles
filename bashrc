@@ -121,6 +121,7 @@ export blog="/home/tapan/src/karecha.com/blog/"
 export exercism="/home/tapan/src/codekatas/exercism/go/"
 export notebook="/home/tapan/src/notebook"
 export dotfiles="/home/tapan/src/dotfiles"
+export dt="/home/tapan/Desktop"
 
 screenfetch
 acpi -ba
