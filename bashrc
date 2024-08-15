@@ -105,27 +105,22 @@ xhost +local:root > /dev/null 2>&1
 # it regains control.  #65623
 # http://cnswww.cns.cwru.edu/~chet/bash/FAQ (E11)
 shopt -s checkwinsize
-
 shopt -s expand_aliases
 
 # export QT_SELECT=4
 
 # History settings
- HISTCONTROL=ignoredups:erasedups
- shopt -s histappend
- PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # exports
-export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin
+export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin:.
 export blog="/home/tapan/src/karecha.com/blog/"
 export exercism="/home/tapan/src/codekatas/exercism/go/"
 export notebook="/home/tapan/src/notebook"
 export dotfiles="/home/tapan/src/dotfiles"
 export dt="/home/tapan/Desktop"
-
-screenfetch
-acpi -ba
-echo `date`
 
 alias cp="cp -i"	# confirm before overwriting something
 set -o vi		# use vi as default editing mode
@@ -136,12 +131,20 @@ export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entrie
 shopt -s dotglob	# include dot files when globbing file names
 shopt -s cdable_vars	# treat variables as directory names
 
-echo
-echo xfce keyboard shortcuts:
-echo ctrl + alt + F[ile manager]
-echo ctrl + alt + T[erminal]
-echo ctrl + alt + W[eb browser]
-echo ctrl + alt + C[alibre]
-echo ctrl + alt + L[iferea]
-echo
+banner(){
+	screenfetch
+	acpi -ba
+	echo `date`
+
+	echo
+	echo xfce keyboard shortcuts:
+	echo ctrl + alt + F[ile manager]
+	echo ctrl + alt + T[erminal]
+	echo ctrl + alt + W[eb browser]
+	echo ctrl + alt + C[alibre]
+	echo ctrl + alt + L[iferea]
+	echo
+}
+
+banner
 
