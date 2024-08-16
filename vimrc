@@ -14,11 +14,19 @@ set textwidth=80
 set ruler				" show row and column ruler information
 set spell spelllang=en_us		" turn spell check on and set to us_en
 set spellfile=~/.vim/spell/en.utf-8.add	" add words to personal dictionary
+set nocompatible
 
 filetype plugin indent on
 syntax enable
 set background=dark
 colorscheme solarized
 
-imap jk <esc>
+execute pathogen#infect()
+
+let g:vimwiki_list = [
+  \ {'path': '~/src/notebook/vimwiki', 'syntax': 'markdown', 'ext': '.md'}
+  \ ]
+
+imap jk <esc>				" in insert mode, jk combination triggers ESC
+nnoremap <C-S-c> :w !xclip -selection clipboard<CR> " in normal mode, selected text is copied to clipboard
 
