@@ -26,6 +26,7 @@ execute pathogen#infect()
 let g:vimwiki_list = [
   \ {'path': '~/src/notebook/vimwiki', 'syntax': 'markdown', 'ext': '.md'}
   \ ]
+let g:vimwiki_global_ext = 0	" do not treat external md files as wiki
 
 imap jk <esc>				" in insert mode, jk combination triggers ESC
 nnoremap <C-S-c> :w !xclip -selection clipboard<CR> " in normal mode, selected text is copied to clipboard
