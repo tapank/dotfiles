@@ -71,7 +71,7 @@ if ${use_color} ; then
 	fi
 
 	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;31m\][\h\[\033[01;34m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
 		# git related configs are explained well at https://mjswensen.com/blog/git-status-prompt-options/
 		source /usr/share/git/completion/git-prompt.sh
@@ -79,7 +79,7 @@ if ${use_color} ; then
 		export GIT_PS1_SHOWDIRTYSTATE=true
 		export GIT_PS1_SHOWUNTRACKEDFILES=true
 		export GIT_PS1_SHOWUPSTREAM="auto"
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \w\[\033[01;32m\]\[\e[91m\]$(__git_ps1)\[\e[00m\]\[\033[01;32m\]]\$\[\033[00m\] '
+		PS1='\[\033[01;32m\][\u@\h\[\033[01;34m\] \w\[\033[01;32m\]\[\e[91m\]$(__git_ps1)\[\e[00m\]\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
 	alias ls='ls -F --color=auto'
