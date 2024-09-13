@@ -16,12 +16,12 @@ set spell spelllang=en_us		" turn spell check on and set to us_en
 set spellfile=~/.vim/spell/en.utf-8.add	" add words to personal dictionary
 set nocompatible
 
+execute pathogen#infect()
+
 filetype plugin indent on
 syntax enable
 set background=light
 colorscheme solarized
-
-execute pathogen#infect()
 
 let g:vimwiki_list = [
   \ {'path': '~/src/notebook/vimwiki', 'syntax': 'markdown', 'ext': '.md'}
