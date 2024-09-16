@@ -104,6 +104,11 @@ export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entrie
 shopt -s dotglob	# include dot files when globbing file names
 shopt -s cdable_vars	# treat variables as directory names
 
+# source exercism autocomplete if available
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  source ~/.config/exercism/exercism_completion.bash
+fi
+
 banner(){
 	screenfetch
 	acpi -ba
