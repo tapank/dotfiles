@@ -96,6 +96,8 @@ export dotfiles="/home/tapan/src/dotfiles"
 export dt="/home/tapan/Desktop"
 
 alias cp="cp -i"	# confirm before overwriting something
+alias d="dict -d gcide" # lookup english language dictionary
+alias c="dict -d foldoc"# lookup computer terms dictionary
 set -o vi		# use vi as default editing mode
 set -o ignoreeof	# prevent Bash from quiting on EOF
 EDITOR=vim		# use vim for editing commands instead of vi
