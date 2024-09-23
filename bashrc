@@ -59,6 +59,7 @@ if ${use_color} ; then
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
+	alias tree='tree -C'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -89,22 +90,15 @@ PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # exports
 export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin:.
-export blog="/home/tapan/src/karecha.com/blog/"
-export exercism="/home/tapan/src/codekatas/exercism/go/"
-export notebook="/home/tapan/src/notebook"
-export dotfiles="/home/tapan/src/dotfiles"
-export dt="/home/tapan/Desktop"
+export CDPATH=$CDPATH:~:~/src/karecha.com:~/src:~/Desktop
 
-alias cp="cp -i"	# confirm before overwriting something
-alias d="dict -d gcide" # lookup english language dictionary
-alias c="dict -d foldoc" # lookup computer terms dictionary
-set -o vi		# use vi as default editing mode
-set -o ignoreeof	# prevent Bash from quiting on EOF
-EDITOR=vim		# use vim for editing commands instead of vi
-export EDITOR
+alias cp="cp -i"		# confirm before overwriting something
+alias d="dict -d gcide"		# lookup english language dictionary
+alias c="dict -d foldoc"	# lookup computer terms dictionary
+set -o vi			# use vi as default editing mode
+set -o ignoreeof		# prevent Bash from quiting on EOF
+export EDITOR=vim		# use vim for editing commands instead of vi
 export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
-shopt -s dotglob	# include dot files when globbing file names
-shopt -s cdable_vars	# treat variables as directory names
 
 # source exercism autocomplete if available
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
