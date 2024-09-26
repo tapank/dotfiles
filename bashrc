@@ -89,7 +89,7 @@ shopt -s histappend
 PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
 
 # exports
-export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin:.
+export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin:/home/tapan/go/bin:.
 export CDPATH=$CDPATH:~:~/src/karecha.com:~/src:~/Desktop
 
 alias cp="cp -i"		# confirm before overwriting something
