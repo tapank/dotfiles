@@ -93,10 +93,10 @@ export PATH=$PATH:/usr/local/go/bin:/home/tapan/bin:/home/tapan/go/bin:.
 export CDPATH=$CDPATH:~:~/src/karecha.com:~/src:~/Desktop
 
 alias cp="cp -i"		# confirm before overwriting something
-alias d="dict -d gcide"		# lookup english language dictionary
-alias c="dict -d foldoc"	# lookup computer terms dictionary
+alias d="clear;dict -d gcide"		# lookup English language dictionary
+alias c="clear;dict -d foldoc"	# lookup computer terms dictionary
 set -o vi			# use vi as default editing mode
-set -o ignoreeof		# prevent Bash from quiting on EOF
+set -o ignoreeof		# prevent Bash from quitting on EOF
 export EDITOR=vim		# use vim for editing commands instead of vi
 export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
 
