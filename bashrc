@@ -47,7 +47,8 @@ if ${use_color} ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;34m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
 		# git related configs are explained well at https://mjswensen.com/blog/git-status-prompt-options/
-		source /usr/share/git/completion/git-prompt.sh
+		# copy https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh to ~/.config/gitprompt
+		source ~/.config/gitprompt/git-prompt.sh
 		export GIT_PS1_SHOWSTASHSTATE=true
 		export GIT_PS1_SHOWDIRTYSTATE=true
 		export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -55,12 +56,13 @@ if ${use_color} ; then
 		PS1='\[\033[01;32m\][\u@\h\[\033[01;34m\] \w\[\033[01;32m\]\[\e[91m\]$(__git_ps1)\[\e[00m\]\[\033[01;32m\]]\$\[\033[00m\] '
 	fi
 
-	alias ls='ls -AvF --group-directories-first --color=auto'
+	alias ls='ls -AvF --color=auto'
 	alias ll='ls -lh'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
 	alias tree='tree -C'
+	alias open='xdg-open'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
