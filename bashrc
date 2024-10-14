@@ -107,10 +107,10 @@ if [ -f ~/.config/exercism/exercism_completion.bash ]; then
 fi
 
 banner(){
-	screenfetch
+	echo
+	screenfetch -n
+	echo
 	acpi -ba
-	echo `date`
-
 	echo
 	echo xfce keyboard shortcuts:
 	echo ctrl + alt + F[ile manager]
@@ -118,6 +118,8 @@ banner(){
 	echo ctrl + alt + W[eb browser]
 	echo ctrl + alt + C[alibre]
 	echo ctrl + alt + L[iferea]
+	echo
+	echo `date`
 	echo
 }
 
