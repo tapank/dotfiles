@@ -10,7 +10,7 @@ set hlsearch ignorecase incsearch	" highlight matches, ignore case, search incre
 set autoindent				" auto indent new lines
 set shiftwidth=8
 set softtabstop=8
-set textwidth=80
+set textwidth=72
 set ruler				" show row and column ruler information
 set spell spelllang=en_us		" turn spell check on and set to us_en
 set spellfile=~/.vim/spell/en.utf-8.add	" add words to personal dictionary
