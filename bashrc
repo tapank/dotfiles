@@ -61,6 +61,7 @@ if ${use_color} ; then
 	alias fgrep='fgrep --colour=auto'
 	alias tree='tree -C'
 	alias open='xdg-open'
+	alias dvtm='dvtm -m ^A'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -125,3 +126,4 @@ banner(){
 
 banner
 
+. "$HOME/.cargo/env"
