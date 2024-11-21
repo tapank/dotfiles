@@ -62,6 +62,7 @@ if ${use_color} ; then
 	alias tree='tree -C'
 	alias open='xdg-open'
 	alias dvtm='dvtm -m ^A'
+	alias todo="cat ~/src/notebook/vimwiki/index.md | grep -A10000 '# Tasks.*'"
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
