@@ -15,7 +15,9 @@
 
 @-moz-document domain("news.ycombinator.com"),
 	domain("mythfolklore.net"),
-	domain("web.whatsapp.com")
+	domain("web.whatsapp.com"),
+	domain("x.com"),
+	domain("en.wikipedia.org")
 	{
 	* { font-family: "Courier", monospace !important; }
 	a:link { color: blue !important; }
