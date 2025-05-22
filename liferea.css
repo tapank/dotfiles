@@ -106,8 +106,8 @@ img.gravatar { }
 .slashValue { }
 
 body {
-	font-family: "Courier Prime";
-	font-size: 1.4em;
+	font-family: "Courier";
+	font-size: 1.3em;
 	margin-left: 200px;
 	max-width: 72ch
 }
