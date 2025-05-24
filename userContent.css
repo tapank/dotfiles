@@ -20,7 +20,7 @@
 	domain("en.wikipedia.org")
 	{
 	* { font-family: "Courier", monospace !important; }
-	a:link { color: blue !important; }
+	a:link { color: #1E90FF !important; }
 	a:visited { color: purple !important; }
 }
 
