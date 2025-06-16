@@ -61,7 +61,7 @@ if ${use_color} ; then
 	alias fgrep='fgrep --colour=auto'
 	alias tree='tree -C'
 	alias open='xdg-open'
-	alias todo="cat ~/src/notebook/vimwiki/index.md | grep -A10000 '# Tasks.*'"
+	alias t='todo.sh'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
@@ -102,6 +102,9 @@ set -o ignoreeof		# prevent Bash from quitting on EOF
 export EDITOR=vim		# use vim for editing commands instead of vi
 export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
 
+# setup autocomplete for the todo alias
+complete -F _todo t
+
 # source exercism autocomplete if available
 if [ -f ~/.config/exercism/exercism_completion.bash ]; then
   source ~/.config/exercism/exercism_completion.bash
@@ -125,5 +128,9 @@ banner(){
 }
 
 banner
+
+echo "TODO:"
+t list
+echo
 
 . "$HOME/.cargo/env"
