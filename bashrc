@@ -62,6 +62,7 @@ if ${use_color} ; then
 	alias tree='tree -C'
 	alias open='xdg-open'
 	alias t='todo.sh'
+	alias hdfc='cat ~/src/notebook/vimwiki/secrets/hdfc.md | grep -A10 "Summary"'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
