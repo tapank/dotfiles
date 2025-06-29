@@ -15,7 +15,7 @@
 
 @-moz-document domain("news.ycombinator.com"),
 	domain("web.whatsapp.com"),
-	domain("x.com"),
+	domain("x.com")
 	{
 	* { font-family: "Courier", monospace !important; }
 	a:link { color: #1E90FF !important; }
