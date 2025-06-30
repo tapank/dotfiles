@@ -136,4 +136,3 @@ echo "TODO:"
 t list
 echo
 
-. "$HOME/.cargo/env"
