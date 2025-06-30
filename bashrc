@@ -56,6 +56,7 @@ if ${use_color} ; then
 
 	alias ls='ls -AvF --group-directories-first --color=auto'
 	alias ll='ls -lh'
+	alias l='ls -1'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
