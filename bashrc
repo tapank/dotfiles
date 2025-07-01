@@ -106,12 +106,8 @@ export EDITOR=vim		# use vim for editing commands instead of vi
 export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entries
 
 # setup autocomplete for the todo alias
+source ~/src/dotfiles/todo_completion
 complete -F _todo t
-
-# source exercism autocomplete if available
-if [ -f ~/.config/exercism/exercism_completion.bash ]; then
-  source ~/.config/exercism/exercism_completion.bash
-fi
 
 banner(){
 	echo
