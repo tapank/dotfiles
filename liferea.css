@@ -71,7 +71,11 @@ table.headmeta { }
 
 /* Header table fields to different item metadata */
 .author, .categories, .source { }
-.date { }
+.date {
+	display: block !important;
+	font-size: small;
+	color: gray;
+}
 
 /* Image resizing to fit HTML view */
 section, div.content svg, div.content * img { }
@@ -112,3 +116,8 @@ body {
 	max-width: 72ch
 }
 
+time {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #336699;
+}
