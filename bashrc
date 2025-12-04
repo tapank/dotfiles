@@ -110,6 +110,9 @@ export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entrie
 source ~/src/dotfiles/todo_completion
 complete -F _todo t
 
+QUIT_DATE="2025-12-03"
+DAYS_PASSED=$(( ($(date +%s) - $(date +%s -d "$QUIT_DATE")) / 86400 ))
+
 banner(){
 	echo
 	screenfetch -n
@@ -125,11 +128,8 @@ banner(){
 	echo
 	echo `date`
 	echo
+	figlet -f banner "Day   $DAYS_PASSED"
 }
 
 banner
-
-echo "TODO:"
-t list
-echo
 
