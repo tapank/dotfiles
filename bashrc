@@ -110,8 +110,8 @@ export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entrie
 source ~/src/dotfiles/todo_completion
 complete -F _todo t
 
-QUIT_DATE="2025-12-24"
-DAYS_PASSED=$(( ($(date +%s) - $(date +%s -d "$QUIT_DATE")) / 86400 ))
+LAST_HAD_IT_ON="2026-01-05"
+DAYS_PASSED=$(( ($(date +%s) - $(date +%s -d "$LAST_HAD_IT_ON")) / 86400 ))
 
 banner(){
 	echo
