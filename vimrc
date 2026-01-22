@@ -16,6 +16,7 @@ set spell spelllang=en_us		" turn spell check on and set to us_en
 set spellfile=~/.vim/spell/en.utf-8.add	" add words to personal dictionary
 set nocompatible
 set dir=~/tmp
+set keywordprg=clear;dict\ -d\ gcide
 
 " set the color of bad words picked up by spell checker
 hi SpellBad cterm=underline ctermfg=red
