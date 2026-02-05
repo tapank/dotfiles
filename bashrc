@@ -110,6 +110,10 @@ export HISTTIMEFORMAT="%y/%m/%d %T "	# time stamp format for bash history entrie
 source ~/src/dotfiles/todo_completion
 complete -F _todo t
 
+# enable utf8 support in terminal
+export LANG=en_IN.UTF-8
+export LC_ALL=en_IN.UTF-8
+
 LAST_HAD_IT_ON="2026-02-01"
 DAYS_PASSED=$(( ($(date +%s) - $(date +%s -d "$LAST_HAD_IT_ON")) / 86400 ))
 
