@@ -132,7 +132,7 @@ banner(){
 	echo
 	echo `date`
 	echo
-	figlet -f banner "Day   $DAYS_PASSED"
+	figlet -f banner " $DAYS_PASSED"
 }
 
 banner
