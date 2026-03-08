@@ -77,7 +77,7 @@ def main():
                     f"[{format_change(change_pct)}]"
                 )
                 if count == 2:
-                    lines.append(f"    {color("-", '33')}  ")
+                    lines.append(f"    {color('-', '33')}  ")
                 if count == 4:
                     count = 0
             except urllib.error.URLError as e:
