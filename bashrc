@@ -114,9 +114,6 @@ complete -F _todo t
 export LANG=en_IN.UTF-8
 export LC_ALL=en_IN.UTF-8
 
-LAST_HAD_IT_ON="2026-02-26"
-DAYS_PASSED=$(( ($(date +%s) - $(date +%s -d "$LAST_HAD_IT_ON")) / 86400 ))
-
 banner(){
 	echo
 	screenfetch -n
@@ -132,7 +129,6 @@ banner(){
 	echo
 	echo `date`
 	echo
-	figlet -f banner " $DAYS_PASSED"
 }
 
 banner
