@@ -66,6 +66,7 @@ if ${use_color} ; then
 	alias tls='clear;t ls'
 	alias hdfc='cat ~/src/notebook/vimwiki/secrets/hdfc.md | grep -A10 "Summary"'
 	alias cls='clear;ls'
+	alias sp='spaced -u aditya_12'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
