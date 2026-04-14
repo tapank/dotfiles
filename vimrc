@@ -31,3 +31,10 @@ let g:vimwiki_list = [
   \ ]
 let g:vimwiki_global_ext = 0	" do not treat external md files as wiki
 
+" simplenote credentials
+let g:SimplenoteUsername = "tapankarecha@gmail.com"
+let g:SimplenotePassword = "Iso_help0"
+
+" Optional: Keep everything in one window like the official app
+" let g:SimplenoteSingleWindow = 1
+
