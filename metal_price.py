@@ -47,7 +47,7 @@ def color(text, code):
 
 def format_price(price, currency):
     symbol = "₹" if currency == "INR" else "$"
-    return color(f"{symbol}{price:9.4f}", "97;1")
+    return color(f"{symbol}{price:7.2f}", "97;1")
 
 
 def format_change(change_pct):
