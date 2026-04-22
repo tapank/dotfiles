@@ -2,12 +2,9 @@
 """
 Metal Price Tracker
 Fetches live gold and silver spot price and ETFs
-from Yahoo Finance. Refreshes every 60 seconds.
-No external dependencies required.
+from Yahoo Finance.
 """
 
-import time
-import sys
 import json
 import urllib.request
 import urllib.error
@@ -59,47 +56,28 @@ def format_change(change_pct):
 
 def main():
     print("\033[H\033[J", end="")
-    print(color("Gold and Silver Price Tracker", "96;1"))
-    print(color("Refreshing every 60 seconds. Press Ctrl+C to quit.\n", "90"))
+    print(color("Gold and Silver Price", "96;1"), end="")
 
-    while True:
-        timestamp = datetime.now().strftime("%H:%M:%S")
-        lines = [f"  {color(timestamp, '90')}"]
+    timestamp = datetime.now().strftime("%d %b %Y %H:%M:%S")
+    lines = [f" {color("[" + timestamp + "]", '90')}"]
 
-        count = 0
-        for label, ticker in TICKERS.items():
-            try:
-                count += 1
-                price, change_pct, currency = fetch_ticker(ticker)
-                lines.append(
-                    f"    {color(label, '33')}  "
-                    f"{format_price(price, currency)}  "
-                    f"[{format_change(change_pct)}]"
-                )
-                if count == 2:
-                    lines.append(f"    {color('-', '33')}  ")
-                if count == 4:
-                    count = 0
-            except urllib.error.URLError as e:
-                lines.append(f"    {color(label, '33')}  {color(f'Network error: {e.reason}', '91')}")
-            except Exception as e:
-                lines.append(f"    {color(label, '33')}  {color(f'Error: {e}', '91')}")
-
-        # Move cursor up to overwrite previous output
-        num_lines = len(TICKERS) + 2
-        if hasattr(main, "first_run"):
-            sys.stdout.write(f"\033[{num_lines}A")  # move cursor up
-        else:
-            main.first_run = True
-
-        sys.stdout.write("\n".join(lines) + "\n")
-        sys.stdout.flush()
-        time.sleep(60)
-
+    count = 0
+    for label, ticker in TICKERS.items():
+        try:
+            count += 1
+            price, change_pct, currency = fetch_ticker(ticker)
+            lines.append(
+                f"    {color(label, '33')}  "
+                f"{format_price(price, currency)}  "
+                f"[{format_change(change_pct)}]"
+            )
+            if count == 2:
+                lines.append(f"    {color('-', '33')}  ")
+        except urllib.error.URLError as e:
+            lines.append(f"    {color(label, '33')}  {color(f'Network error: {e.reason}', '91')}")
+        except Exception as e:
+            lines.append(f"    {color(label, '33')}  {color(f'Error: {e}', '91')}")
+    print("\n".join(lines))
 
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print(color("\n  Bye!", "90"))
-        sys.exit(0)
+    main()
