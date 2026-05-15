@@ -87,7 +87,7 @@ def track_markets():
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
     
     # Print Column Headers
-    header = f" {'Asset (Ticker)':<36} | {'Spot Price':<14} | {'Daily Gain':<10} | {'52W High':<13} | {'52W Low':<13}"
+    header = f" {'Asset (Ticker)':<36} | {'Spot Price':>14} | {'Daily Gain':>10} | {'52W High':>13} | {'52W Low':>13}"
     print(f"{BOLD}{header}{RESET}")
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
     
