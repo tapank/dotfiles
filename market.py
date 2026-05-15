@@ -111,10 +111,10 @@ def track_markets():
         # Construct the row layout using f-string alignment padding
         row = (
             f" {name_ticker:<36} | "
-            f"{BOLD}{price_str:<14}{RESET} | "
-            f"{color}{gain_str:<10}{RESET} | "
-            f"{GREEN}{high_str:<13}{RESET} | "
-            f"{RED}{low_str:<13}{RESET}"
+            f"{BOLD}{price_str:>14}{RESET} | "
+            f"{color}{gain_str:>10}{RESET} | "
+            f"{GREEN}{high_str:>13}{RESET} | "
+            f"{RED}{low_str:>13}{RESET}"
         )
         print(row)
         
