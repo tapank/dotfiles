@@ -19,6 +19,8 @@ YELLOW = "\033[93m"
 
 # Unsorted list of assets
 ASSETS = [
+    {"name": "BSE Sensex", "ticker": "^BSESN"},
+    {"name": "Nifty 50", "ticker": "^NSEI"},
     {"name": "HDFC Gold ETF", "ticker": "HDFCGOLD.NS"},
     {"name": "HDFC Silver ETF", "ticker": "HDFCSILVER.NS"},
     {"name": "Silver Futures", "ticker": "SI=F"},
