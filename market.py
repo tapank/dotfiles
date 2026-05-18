@@ -52,7 +52,10 @@ def track_markets():
             
             price = meta["regularMarketPrice"]
             prev_close = meta["previousClose"]
-            gain = ((price - prev_close) / prev_close) * 100
+            
+            # Calculate absolute change and percentage gain
+            change = price - prev_close
+            gain = (change / prev_close) * 100
             
             # Extract 52-week metrics and native currency
             high_52 = meta.get("fiftyTwoWeekHigh", price)
@@ -63,6 +66,7 @@ def track_markets():
                 "name": asset["name"],
                 "ticker": asset["ticker"],
                 "price": price,
+                "change": change,
                 "gain": gain,
                 "high_52": high_52,
                 "low_52": low_52,
@@ -73,14 +77,14 @@ def track_markets():
             break
     
     if error_occurred:
-        print(f"{RED}Error fetching data.")
+        print(f"{RED}Error fetching data.{RESET}")
         return
 
     clear_screen()
     current_time = datetime.now().strftime("%d %B %Y %I:%M%p")
     
-    # Table configuration variables (96 characters wide)
-    TABLE_WIDTH = 99
+    # Table configuration variables (increased to 112 for the new column)
+    TABLE_WIDTH = 112
     
     # Print Header
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
@@ -89,7 +93,7 @@ def track_markets():
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
     
     # Print Column Headers
-    header = f" {'Asset (Ticker)':<36} | {'Spot Price':>14} | {'Daily Gain':>10} | {'52W High':>13} | {'52W Low':>13}"
+    header = f" {'Asset (Ticker)':<36} | {'Spot Price':>14} | {'Change':>10} | {'Daily Gain':>10} | {'52W High':>13} | {'52W Low':>13}"
     print(f"{BOLD}{header}{RESET}")
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
     
@@ -106,6 +110,7 @@ def track_markets():
         # Format individual strings to guarantee column widths
         name_ticker = f"{r['name']} ({r['ticker']})"
         price_str = f"{r['price']:.2f} {r['currency']}"
+        change_str = f"{sign}{r['change']:.2f}"
         gain_str = f"{sign}{gain:.2f}%"
         high_str = f"{r['high_52']:.2f} {r['currency']}"
         low_str = f"{r['low_52']:.2f} {r['currency']}"
@@ -114,13 +119,14 @@ def track_markets():
         row = (
             f" {name_ticker:<36} | "
             f"{BOLD}{price_str:>14}{RESET} | "
+            f"{color}{change_str:>10}{RESET} | "
             f"{color}{gain_str:>10}{RESET} | "
             f"{GREEN}{high_str:>13}{RESET} | "
             f"{RED}{low_str:>13}{RESET}"
         )
         print(row)
         
-        # Print Footer
+    # Print Footer
     print(f"{CYAN}{'=' * TABLE_WIDTH}{RESET}")
             
 if __name__ == "__main__":
