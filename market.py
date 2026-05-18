@@ -31,11 +31,11 @@ ASSETS = [
     {"name": "Infosys Ltd (NSE)", "ticker": "INFY.NS", "source": "yahoo"},
     
     # Official AMFI 6-digit scheme codes mapped for the EXACT Regular Growth mutual funds
-    {"name": "Axis Liquid Fund", "ticker": "120465", "source": "amfi"},
+    {"name": "Axis Liquid Fund", "ticker": "112210", "source": "amfi"},
     {"name": "UTI Nifty 500 Value 50", "ticker": "151738", "source": "amfi"},
     {"name": "HDFC Large Cap Fund", "ticker": "102000", "source": "amfi"},
     {"name": "HDFC Mid Cap Fund", "ticker": "105758", "source": "amfi"},
-    {"name": "HDFC NIFTY50 Equal Wgt", "ticker": "148982", "source": "amfi"}
+    {"name": "HDFC NIFTY50 Equal Wgt", "ticker": "149106", "source": "amfi"}
 ]
 
 def clear_screen():
