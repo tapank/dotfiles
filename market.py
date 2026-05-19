@@ -97,7 +97,7 @@ def track_markets():
     
     # Initialize the Rich Table
     table = Table(
-        title=f"[bold cyan]LIVE MARKET TRACKER[/bold cyan]\n[yellow]{current_time}[/yellow]",
+        title=f"\n[bold cyan]LIVE MARKET TRACKER[/bold cyan]\n[yellow]{current_time}[/yellow]",
         box=box.ROUNDED,
         header_style="bold cyan",
         title_justify="center"
