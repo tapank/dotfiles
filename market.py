@@ -23,6 +23,7 @@ ASSETS = [
     {"name": "ITC Ltd.", "ticker": "ITC.NS", "source": "yahoo"},
     {"name": "Infosys Ltd (NASDAQ)", "ticker": "INFY", "source": "yahoo"},
     {"name": "Infosys Ltd (NSE)", "ticker": "INFY.NS", "source": "yahoo"},
+    {"name": "SpaceX (NASDAQ)", "ticker": "SPCX", "source": "yahoo"},
     {"name": "USD", "ticker": "USDINR=X", "source": "yahoo"},
     
     # Official AMFI 6-digit scheme codes
